@@ -69,7 +69,7 @@ project/
 ## Backend `.env`
 
 ```env
-MONGO_URI=your_mongodb_connection_string
+MONGO_URI=mongodb+srv://virajithajayathilaka:virajithadilshan@cluster0.sz1ju3t.mongodb.net/crm_db?retryWrites=true&w=majority
 PORT=5000
 ```
 
@@ -153,7 +153,7 @@ Deployed using Render
 
 # Author
 
-Virajitha Jayathilaka
+Virajitha Dilshan Jayathilaka
 
-BSc Applied Science in Computing  
+BSc(Hons) Applied Science in Computing  
 University of Jaffna
