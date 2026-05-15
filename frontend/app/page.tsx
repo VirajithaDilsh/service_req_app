@@ -83,6 +83,21 @@ export default function Home() {
 
     fetchJobs();
   }, [categoryFilter, statusFilter]);
+  const getStatusColor = (status: string) => {
+  switch (status) {
+    case "Open":
+      return "bg-green-100 text-green-700";
+
+    case "In Progress":
+      return "bg-yellow-100 text-yellow-700";
+
+    case "Closed":
+      return "bg-red-100 text-red-700";
+
+    default:
+      return "bg-gray-100 text-gray-700";
+  }
+};
   return (
     <main>
       <div className="w-full px-4 sm:px-6 lg:px-8 flex items-center justify-between mb-6">
@@ -135,7 +150,7 @@ export default function Home() {
               className="group bg-white rounded-lg border border-slate-200 p-5 hover:border-blue-300 hover:shadow-md transition-all duration-200 flex flex-col h-full"
             >
               <div className="flex justify-between mb-3">
-                <span className="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">
+                <span className={`text-sm px-3 py-1 rounded-full ${getStatusColor(job.status)}`}>
                   {job.status}
                 </span>
 

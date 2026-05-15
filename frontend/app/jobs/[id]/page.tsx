@@ -130,6 +130,21 @@ export default function JobDetailPage() {
       </div>
     );
   }
+  const getStatusColor = (status: string) => {
+  switch (status) {
+    case "Open":
+      return "bg-green-100 text-green-700";
+
+    case "In Progress":
+      return "bg-yellow-100 text-yellow-700";
+
+    case "Closed":
+      return "bg-red-100 text-red-700";
+
+    default:
+      return "bg-gray-100 text-gray-700";
+  }
+};
 
   return (
     <div className="max-w-4xl mx-auto">
@@ -146,7 +161,7 @@ export default function JobDetailPage() {
           <div className="flex justify-between items-start gap-4 mb-4">
             <h1 className="text-3xl font-bold">{job.title}</h1>
 
-            <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">
+            <span className={`px-3 py-1 rounded-full text-sm ${getStatusColor(job.status)}`}>
               {job.status}
             </span>
           </div>
