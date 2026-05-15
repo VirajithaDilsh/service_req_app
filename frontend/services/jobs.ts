@@ -3,7 +3,7 @@ import { JobRequest, JobFilters, JobStatus } from "../types";
 
 const API = axios.create({
   baseURL:
-    "https://refactored-goldfish-pj669p7xwprwh7j9p-5000.app.github.dev/api",
+    "https://service-req-app.onrender.com/api",
 });
 
 export const listJobs = async (
