@@ -145,6 +145,9 @@ DELETE /api/jobs/:id
 
 ## Frontend
 Deployed using Vercel
+```http
+https://service-req-app.vercel.app/
+````
 
 ## Backend
 Deployed using Render
